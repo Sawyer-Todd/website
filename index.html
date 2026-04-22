@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name — Film</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Courier+Prime:ital@0;1&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0d0d;
+      --surface: #141414;
+      --border: #2a2a2a;
+      --text: #e8e2d9;
+      --muted: #6b6560;
+      --accent: #c8b89a;
+      --dim: #2a2520;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Courier Prime', monospace;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 100;
+      opacity: 0.5;
+    }
+
+    header {
+      padding: 80px 60px 64px;
+      border-bottom: 1px solid var(--border);
+      animation: fadeUp 0.9s ease both;
+    }
+
+    .name {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(52px, 8vw, 110px);
+      line-height: 0.92;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 32px;
+    }
+
+    .name em { font-style: italic; color: var(--accent); }
+
+    .bio {
+      max-width: 1000px;
+      font-size: 25px;
+      line-height: 1.85;
+      color: var(--muted);
+      font-style: italic;
+      border-left: 1px solid var(--dim);
+      padding-left: 20px;
+    }
+
+    section {
+      padding: 72px 60px 80px;
+      border-bottom: 1px solid var(--border);
+      animation: fadeUp 0.9s ease both;
+    }
+
+    section:nth-of-type(2) { animation-delay: 0.1s; }
+    section:nth-of-type(3) { animation-delay: 0.2s; }
+
+    .section-label {
+      font-size: 75px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: 40px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .video-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 50px;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .embed-box {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .embed-box .placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 11px;
+      font-style: italic;
+      letter-spacing: 0.08em;
+    }
+
+    .embed-box .placeholder span {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--dim);
+    }
+
+    .embed-box iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-credits {
+      font-size: 25px;
+      color: var(--text);
+      margin-top: 12px;
+      line-height: 1.7;
+      font-style: italic;
+      border-left: 1px solid var(--dim);
+      padding-left: 14px;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 700px) {
+      header, section, footer { padding-left: 24px; padding-right: 24px; }
+      .video-grid { grid-template-columns: 1fr; gap: 48px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 class="name">Sawyer Todd</h1>
+  <p class="bio">
+    <!-- REPLACE: 2–3 sentence bio -->
+    Filmmaker based in DFW. I love truthful storytelling and crafting films that really get people thinking. I'm certainly going to die before I've written everything I've wanted to. Sounds kind of morbid but my fellow artists get it :)
+  </p>
+</header>
+
+
+<!-- ══════════════ FILMS ══════════════ -->
+<section>
+  <div class="section-label">Films</div>
+  <div class="video-grid">
+
+    <!-- FILM 1 — copy this whole block to add another film -->
+    <div class="video-item">
+      <div class="video-title">Height of Hand · 2025</div>
+      <div class="embed-box">
+        <!-- REPLACE: delete placeholder div, paste your iframe -->
+        <!-- <iframe src="https://player.vimeo.com/video/YOUR_ID" allowfullscreen></iframe> -->
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1185664773?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Height of Hand"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+      <div class="video-credits">Producer/Writer/Director/DP</div>
+    </div>
+
+    <!-- FILM 2 -->
+    <div class="video-item">
+      <div class="video-title">Next · 2022</div>
+      <div class="embed-box">
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1185665633?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Next"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+      <div class="video-credits">Producer/Writer/Director/DP</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════ ADDITIONAL WORK ══════════════ -->
+<section>
+  <div class="section-label">Additional Work</div>
+  <div class="video-grid">
+
+    <!-- WORK 1 — copy this whole block to add another -->
+    <div class="video-item">
+      <div class="video-title">Lazy · 2022</div>
+      <div class="embed-box">
+        <!-- REPLACE: delete placeholder div, paste your iframe -->
+  <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1185665704?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Lazy (official music video)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+      <div class="video-credits">Co-director</div>
+    </div>
+
+    <!-- WORK 2 -->
+    <div class="video-item">
+      <div class="video-title">Matthew 25 · 2025</div>
+      <div class="embed-box">
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1185662474?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Matthew 25 commercial"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+      <div class="video-credits">Producer</div>
+    </div>
+
+  </div>
+</section>
